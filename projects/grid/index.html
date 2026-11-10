@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GRID · A terminal-first workspace for macOS</title>
+  <meta name="description" content="GRID is a terminal-first workspace for macOS: a real terminal, file browser, app launcher, widget deck, web browser and offline map in one keyboard-driven window, styled after Tron: Legacy and Tron: Ares.">
+  <meta name="theme-color" content="#030608">
+  <link rel="canonical" href="https://max-pasho.github.io/projects/grid/">
+  <link rel="icon" href="/assets/img/grid/favicon-64.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/grid/icon-180.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GRID: a terminal-first workspace for macOS">
+  <meta property="og:description" content="A real terminal, file browser, app launcher, widget deck, web browser and offline map in one keyboard-driven window.">
+  <meta property="og:url" content="https://max-pasho.github.io/projects/grid/">
+  <meta property="og:image" content="https://max-pasho.github.io/assets/img/grid/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script>
+    // Apply the saved GRID theme before first paint (no flash).
+    try {
+      var t = localStorage.getItem("grid-theme");
+      if (t === "ares" || t === "encom") document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="/assets/css/grid.css">
+  <script src="/assets/js/grid.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap">
+      <a class="wordmark" href="#top">GRID</a>
+      <nav aria-label="Page">
+        <ul class="nav">
+          <li><a href="#features"><span class="n">02</span>Features</a></li>
+          <li><a href="#map"><span class="n">03</span>Map</a></li>
+          <li><a href="#install"><span class="n">04</span>Install</a></li>
+          <li><a href="#privacy"><span class="n">05</span>Privacy</a></li>
+        </ul>
+      </nav>
+      <a class="ext" href="/">‹ max-pasho</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <p class="crumbs"><a href="/">max-pasho</a><span class="sep">/</span><a href="/#projects">Projects</a><span class="sep">/</span>GRID</p>
+
+      <!-- Hero -->
+      <section class="hero-project">
+        <span class="label build"><span class="n">00</span>GRID<span class="sfx">.APP</span> &nbsp;·&nbsp; v1.0.0</span>
+        <h1 class="build" style="--i:1">GRID</h1>
+        <p class="sub build" style="--i:2">A terminal-first workspace for macOS.</p>
+        <p class="lede build" style="--i:3">A real terminal, a file browser, an app launcher, a widget deck, a web browser and an offline map in one keyboard-driven window, styled after the production design of <i>Tron: Legacy</i> and <i>Tron: Ares</i>.</p>
+        <div class="btn-row build" style="--i:4">
+          <a class="btn primary" href="https://github.com/max-pasho/grid/releases/latest">Download v1.0.0 <span class="arrow">↓</span></a>
+          <a class="btn" href="https://github.com/max-pasho/grid">Source on GitHub <span class="arrow">↗</span></a>
+          <a class="btn" href="https://github.com/max-pasho/grid/blob/master/docs/releases/1.0.0.md">Release notes <span class="arrow">↗</span></a>
+        </div>
+        <ul class="meta chips build" style="--i:5" aria-label="Requirements and technology">
+          <li class="tag ghost">macOS 15+</li>
+          <li class="tag ghost">Apple silicon</li>
+          <li class="tag ghost">Swift 6</li>
+          <li class="tag ghost">SwiftUI + AppKit</li>
+          <li class="tag ghost">Metal</li>
+          <li class="tag ghost">No telemetry</li>
+        </ul>
+      </section>
+
+      <figure class="frame plate brackets build" style="--i:6">
+        <span class="bk tl"></span><span class="bk bl"></span><span class="bk br"></span>
+        <div class="plate-head"><span class="label"><span class="n">01</span>TERMINAL<span class="sfx">.TTY-02</span></span></div>
+        <div class="plate-body">
+          <a href="/assets/img/grid/hero.webp">
+            <img src="/assets/img/grid/hero.webp"
+                 srcset="/assets/img/grid/hero-960.webp 960w, /assets/img/grid/hero.webp 1600w"
+                 sizes="(max-width: 1120px) 94vw, 1080px"
+                 width="1600" height="955" fetchpriority="high"
+                 alt="GRID's main window: the Files tree on the left, a terminal split into two panes in the middle, and the widget deck with clock, system, git and file inspector cards on the right">
+          </a>
+        </div>
+        <figcaption>Files tree, a split terminal and the widget deck, in the Legacy theme.</figcaption>
+      </figure>
+
+      <!-- Why -->
+      <section class="section" aria-labelledby="why-title">
+        <div class="section-head"><h2 id="why-title"><span class="n">01</span>Why GRID<span class="sfx">.CORE</span></h2><span class="rule"></span></div>
+        <div class="why">
+          <div class="plate brackets"><span class="bk tl"></span><span class="bk bl"></span><span class="bk br"></span>
+            <div class="plate-body"><h3>Terminal first</h3><p>Your real login shell in a native terminal, with tabs, splits and find. Everything else sits around it.</p></div>
+          </div>
+          <div class="plate brackets"><span class="bk tl"></span><span class="bk bl"></span><span class="bk br"></span>
+            <div class="plate-body"><h3>One keystroke away</h3><p>Files, apps, settings and web pages all open from the command palette (<kbd>⇧⌘P</kbd>). Every shortcut can be changed.</p></div>
+          </div>
+          <div class="plate brackets"><span class="bk tl"></span><span class="bk bl"></span><span class="bk br"></span>
+            <div class="plate-body"><h3>Native and light</h3><p>Swift, SwiftUI and AppKit, with WebKit for the browser. No Electron, no background services.</p></div>
+          </div>
+          <div class="plate brackets"><span class="bk tl"></span><span class="bk bl"></span><span class="bk br"></span>
+            <div class="plate-body"><h3>Private by default</h3><p>No accounts, no telemetry, no cloud. Your data stays on your Mac.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="section" id="features" aria-labelledby="features-title">
+        <div class="section-head"><h2 id="features-title"><span class="n">02</span>Features<span class="sfx">.SYS</span></h2><span class="rule"></span></div>
+
+        <div class="feature">
+          <div class="text">
+            <span class="label"><span class="n">02.1</span>Terminal + Files</span>
+            <h3>A real shell, with your files beside it.</h3>
+            <ul>
+              <li>Your login shell with your PATH and dotfiles, in tabs and <strong>split panes</strong> (up to six per tab).</li>
+              <li><strong>Find</strong> with case, regex and whole-word options; busy, done and bell indicators on tabs.</li>
+              <li>A file browser that <strong>expands folders in place</strong>, or shows them as an icon grid that traces itself in.</li>
+              <li><strong>Drag files in safely:</strong> dropped paths are inserted quoted and are never run for you.</li>
+            </ul>
+          </div>
+          <figure class="frame plate">
+            <div class="plate-body">
+              <a href="/assets/img/grid/files-grid.webp"><img src="/assets/img/grid/files-grid-960.webp" srcset="/assets/img/grid/files-grid-960.webp 960w, /assets/img/grid/files-grid.webp 1600w" sizes="(max-width: 860px) 94vw, 620px" width="960" height="584" loading="lazy" alt="The Files panel showing a folder as an icon grid, with the Now Playing widget floating above it"></a>
+            </div>
+            <figcaption>Files as an icon grid, with Now Playing floating above.</figcaption>
+          </figure>
+        </div>
+
+        <div class="feature flip">
+          <div class="text">
+            <span class="label"><span class="n">02.2</span>Workspace</span>
+            <h3>Arrange it your way.</h3>
+            <ul>
+              <li><strong>Dockable panels:</strong> drag Files, Terminal or the Widget Deck to any edge. The layout is saved.</li>
+              <li><strong>Widget deck</strong> (<kbd>⌘J</kbd>): clock, system, network, storage, power, git, notes and more, all real measurements.</li>
+              <li><strong>Now Playing</strong> redraws cover art in your theme’s colour as a dot matrix or scan lines.</li>
+              <li><strong>Build your own widgets</strong> with a <code>manifest.json</code> and some JavaScript. They run sandboxed.</li>
+            </ul>
+          </div>
+          <figure class="frame plate">
+            <div class="plate-body">
+              <a href="/assets/img/grid/deck.webp"><img src="/assets/img/grid/deck-960.webp" srcset="/assets/img/grid/deck-960.webp 960w, /assets/img/grid/deck.webp 1600w" sizes="(max-width: 860px) 94vw, 620px" width="960" height="573" loading="lazy" alt="GRID in the red Ares theme with the widget deck docked under the terminal, cards side by side"></a>
+            </div>
+            <figcaption>The widget deck docked under the terminal, in the Ares theme.</figcaption>
+          </figure>
+        </div>
+
+        <div class="feature">
+          <div class="text">
+            <span class="label"><span class="n">02.3</span>Browser</span>
+            <h3>The web, in GRID’s style.</h3>
+            <ul>
+              <li>A full <strong>WebKit</strong> browser with tabs, search, find, zoom and history.</li>
+              <li><strong>Site themes</strong> give GitHub, Hacker News, MDN, Wikipedia and more GRID’s colours and type.</li>
+              <li><strong>Reader view</strong> (<kbd>⇧⌘R</kbd>) re-sets articles in a monospaced layout.</li>
+              <li><strong>Ad blocking</strong> with uBlock Origin’s default lists, and WebExtension support on macOS 15.4+.</li>
+            </ul>
+          </div>
+          <div class="pair">
+            <figure class="frame plate">
+              <div class="plate-body"><a href="/assets/img/grid/browser.webp"><img src="/assets/img/grid/browser-960.webp" width="960" height="573" loading="lazy" alt="GitHub shown in GRID's browser with GRID's site theme applied"></a></div>
+              <figcaption>Site theme on GitHub</figcaption>
+            </figure>
+            <figure class="frame plate">
+              <div class="plate-body"><a href="/assets/img/grid/reader.webp"><img src="/assets/img/grid/reader-960.webp" width="960" height="573" loading="lazy" alt="A Wikipedia article in GRID's monospaced reader view"></a></div>
+              <figcaption>Reader view</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="feature flip" id="themes">
+          <div class="text">
+            <span class="label"><span class="n">02.4</span>Palette + Themes</span>
+            <h3>Everything from one prompt.</h3>
+            <p><kbd>⇧⌘P</kbd> opens the command palette for commands, apps, folders and web addresses. It understands a small grammar, and its commands are never sent to your shell.</p>
+<pre><code><span class="p">›</span> app Safari
+<span class="p">›</span> files ~/Projects
+<span class="p">›</span> web example.com
+<span class="p">›</span> theme ares</code></pre>
+            <p>Three themes. Try them on this page:</p>
+            <div class="theme-demo" role="group" aria-label="Page theme">
+              <button type="button" data-set-theme="legacy" style="--sw:#6fe3f5">Legacy<span class="sw"></span></button>
+              <button type="button" data-set-theme="ares" style="--sw:#ff4a2b">Ares<span class="sw"></span></button>
+              <button type="button" data-set-theme="encom" style="--sw:#ffb547">ENCOM<span class="sw"></span></button>
+            </div>
+          </div>
+          <figure class="frame plate">
+            <div class="plate-body">
+              <a href="/assets/img/grid/palette.webp"><img src="/assets/img/grid/palette-960.webp" srcset="/assets/img/grid/palette-960.webp 960w, /assets/img/grid/palette.webp 1100w" sizes="(max-width: 860px) 94vw, 620px" width="960" height="696" loading="lazy" alt="The command palette open in the amber ENCOM theme"></a>
+            </div>
+            <figcaption>The command palette in the ENCOM amber theme.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Map -->
+      <section class="section" id="map" aria-labelledby="map-title">
+        <div class="section-head"><h2 id="map-title"><span class="n">03</span>Map<span class="sfx">.GEO</span></h2><span class="rule"></span></div>
+
+        <div class="feature">
+          <div class="text">
+            <span class="label"><span class="n">03.1</span>Directions</span>
+            <h3>Routes that avoid mapped ALPR cameras.</h3>
+            <p>GRID draws its own map on the GPU: glowing roads, wireframe buildings, 3D terrain and a globe when you zoom out. It shows licence-plate reader cameras mapped by OpenStreetMap volunteers (via <a href="https://deflock.org">DeFlock</a>).</p>
+            <ul>
+              <li>Two routes: the <strong>fastest</strong>, and one that <strong>avoids the mapped cameras</strong> it can, with turn-by-turn steps.</li>
+              <li><strong>Worked out on your Mac:</strong> start points, destinations and routes are never sent anywhere.</li>
+              <li><strong>Print</strong> a route, save it as <strong>GPX</strong>, or copy it as text.</li>
+            </ul>
+          </div>
+          <figure class="frame plate brackets"><span class="bk tl"></span><span class="bk bl"></span><span class="bk br"></span>
+            <div class="plate-head"><span class="label"><span class="n">05</span>MAP<span class="sfx">.GEO</span></span></div>
+            <div class="plate-body">
+              <a href="/assets/img/grid/directions.webp"><img src="/assets/img/grid/directions-960.webp" srcset="/assets/img/grid/directions-960.webp 960w, /assets/img/grid/directions.webp 1600w" sizes="(max-width: 860px) 94vw, 620px" width="960" height="605" loading="lazy" alt="The map tilted over hilly terrain showing a route from A to B, with the Route panel comparing the camera-avoiding route and the fastest route, and turn-by-turn steps"></a>
+            </div>
+            <figcaption>A camera-avoiding route on 3D terrain, compared with the fastest.</figcaption>
+          </figure>
+        </div>
+
+        <div class="gallery">
+          <figure class="frame plate">
+            <div class="plate-body"><a href="/assets/img/grid/terrain.webp"><img src="/assets/img/grid/terrain-960.webp" width="960" height="586" loading="lazy" alt="Tilted 3D terrain of an Alpine valley with contour lines and elevation labels"></a></div>
+            <figcaption>Terrain: relief, contours and real 3D mountains.</figcaption>
+          </figure>
+          <figure class="frame plate">
+            <div class="plate-body"><a href="/assets/img/grid/globe.webp"><img src="/assets/img/grid/globe-960.webp" width="960" height="584" loading="lazy" alt="The map zoomed out to a glowing 3D globe with coastlines and country labels"></a></div>
+            <figcaption>Zoom out far and it becomes a globe.</figcaption>
+          </figure>
+          <figure class="frame plate">
+            <div class="plate-body"><a href="/assets/img/grid/places.webp"><img src="/assets/img/grid/places-960.webp" width="960" height="584" loading="lazy" alt="A town on the map with place icons and the place card for Zermatt open in the side panel"></a></div>
+            <figcaption>Places and offline search (<kbd>⌘F</kbd>).</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Install -->
+      <section class="section" id="install" aria-labelledby="install-title">
+        <div class="section-head"><h2 id="install-title"><span class="n">04</span>Install<span class="sfx">.PKG</span></h2><span class="rule"></span></div>
+        <div class="cols">
+          <div class="plate">
+            <div class="plate-head"><span class="label"><span class="n">04.1</span>Download</span></div>
+            <div class="plate-body">
+              <ol class="steps">
+                <li>Download <strong>GRID-x.y.z-macOS.zip</strong> from the <a href="https://github.com/max-pasho/grid/releases/latest">latest release</a>, unzip it and move <strong>GRID.app</strong> to Applications.</li>
+                <li>GRID isn’t notarized by Apple yet, so macOS blocks the first launch. Open it once, then go to <strong>System Settings › Privacy &amp; Security</strong> and click <strong>Open Anyway</strong>. You only do this once.</li>
+                <li>Optional: check the download against the <code>.sha256</code> file from the same release.</li>
+              </ol>
+<pre><code>shasum -a 256 GRID-1.0.0-macOS.zip</code></pre>
+              <p class="callout"><strong>Requires</strong> macOS 15 Sequoia or later (browser extensions need 15.4) on Apple silicon. GRID can check for updates once a day if you turn it on, and never replaces itself.</p>
+            </div>
+          </div>
+          <div class="plate">
+            <div class="plate-head"><span class="label"><span class="n">04.2</span>Build from source</span></div>
+            <div class="plate-body">
+              <p style="color:var(--text-dim)">Needs Xcode 16.3 or later. Swift Package Manager fetches the rest.</p>
+<pre><code><span class="p">$</span> git clone https://github.com/max-pasho/grid.git
+<span class="p">$</span> cd grid
+<span class="p">$</span> scripts/bundle.sh   <span class="c"># → build/GRID.app</span>
+<span class="p">$</span> open build/GRID.app</code></pre>
+              <table class="keys">
+                <caption class="label" style="text-align:left;padding:8px 0">Key shortcuts</caption>
+                <thead><tr><th scope="col">Keys</th><th scope="col">Action</th></tr></thead>
+                <tbody>
+                  <tr><td><kbd>⇧⌘P</kbd></td><td>Command palette</td></tr>
+                  <tr><td><kbd>⌘T</kbd> <kbd>⌘W</kbd></td><td>New tab / close pane or tab</td></tr>
+                  <tr><td><kbd>⌘D</kbd> <kbd>⇧⌘D</kbd></td><td>Split pane right / down</td></tr>
+                  <tr><td><kbd>⌘B</kbd> <kbd>⌘J</kbd></td><td>Show or hide Files / Widget Deck</td></tr>
+                  <tr><td><kbd>⌥⌘1</kbd>…<kbd>⌥⌘5</kbd></td><td>Terminal · Files · Apps · Web · Map</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Privacy -->
+      <section class="section" id="privacy" aria-labelledby="privacy-title">
+        <div class="section-head"><h2 id="privacy-title"><span class="n">05</span>Privacy<span class="sfx">.SEC</span></h2><span class="rule"></span></div>
+        <div class="plate">
+          <div class="plate-body">
+            <ul class="plain">
+              <li><strong>No accounts, telemetry, cloud services or AI features.</strong> Settings, browsing data and history stay on your Mac. Terminal contents are never logged or stored.</li>
+              <li><strong>Maps are opt-in.</strong> Nothing downloads until you click Enable Map Data, and every camera or road-data download asks first, with the host and size.</li>
+              <li><strong>Web content is isolated.</strong> Pages can’t reach your terminal, files or apps. Downloads are confirmed and quarantined like Safari’s.</li>
+              <li><strong>Widgets are sandboxed</strong> in a separate locked-down process, with permissions shown in plain words.</li>
+              <li><strong>macOS protections stay on.</strong> GRID never tries to work around macOS privacy prompts.</li>
+            </ul>
+            <p style="margin:0;color:var(--text-dim)">Full details: <a href="https://github.com/max-pasho/grid/blob/master/docs/ARCHITECTURE.md">architecture &amp; security model</a>.</p>
+          </div>
+        </div>
+
+        <p class="disclaimer">GRID is an independent fan project inspired by the look of the <i>Tron</i> films. It isn’t affiliated with or endorsed by Disney. Terminal by <a href="https://github.com/migueldeicaza/SwiftTerm">SwiftTerm</a>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="statusbar">
+    <div class="wrap">
+      <span class="cell id">GRID</span>
+      <span class="cell">v1.0.0</span>
+      <span class="cell"><a href="/">‹ max-pasho</a></span>
+      <span class="cell grow"><a href="https://github.com/max-pasho/grid">github.com/max-pasho/grid</a></span>
+      <span class="cell theme-switch" role="group" aria-label="Page theme">
+        <button type="button" data-set-theme="legacy" style="--sw:#6fe3f5">Legacy</button>
+        <button type="button" data-set-theme="ares" style="--sw:#ff4a2b">Ares</button>
+        <button type="button" data-set-theme="encom" style="--sw:#ffb547">ENCOM</button>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
