@@ -2,30 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Page not found · max-pasho</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Page not found · Max Pasho</title>
   <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#091d36">
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/site.css">
+  <script type="module" src="/assets/js/site.js"></script>
 </head>
 <body>
-  <header class="nav">
-    <div class="wrap">
-      <a class="brand" href="/">max-pasho</a>
-      <nav aria-label="Main">
-        <ul>
-          <li><a href="/#projects">Projects</a></li>
-          <li><a href="https://github.com/max-pasho">GitHub</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main class="notfound">
-    <div class="wrap">
-      <p class="code">404</p>
-      <h1>This page doesn’t exist.</h1>
-      <p>It may have moved, or the link might be mistyped.</p>
-      <a class="button" href="/">Go to the home page</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="site-nav">
+    <lg-navbar role="navigation" aria-label="Main" blur="4">
+      <a href="/">Home</a>
+      <a href="/projects/">Projects</a>
+      <a href="/about/">About</a>
+    </lg-navbar>
+  </div>
+
+  <main id="main" class="wrap notfound">
+    <p class="num display" aria-hidden="true">404</p>
+    <h1 class="display notfound-title">This page doesn’t exist.</h1>
+    <p>It may have moved, or the address might be mistyped.</p>
+    <div class="actions">
+      <a class="glass-btn" data-glass="tinted" href="/">Go to the home page</a>
     </div>
   </main>
 </body>

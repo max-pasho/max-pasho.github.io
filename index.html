@@ -2,163 +2,158 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>max-pasho</title>
-  <meta name="description" content="Projects by max-pasho: GRID, a terminal-first workspace for macOS, and an upcoming map of radon levels and cancer statistics across the US.">
-  <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Max Pasho</title>
+  <meta name="description" content="Max Pasho studies cancer biology at the University of Alabama at Birmingham and builds software. Home base for projects including GRID and an upcoming radon and cancer map.">
+  <meta name="theme-color" content="#091d36">
   <link rel="canonical" href="https://max-pasho.github.io/">
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
-
   <meta property="og:type" content="website">
-  <meta property="og:title" content="max-pasho">
-  <meta property="og:description" content="Software that makes complicated things simple.">
+  <meta property="og:title" content="Max Pasho">
+  <meta property="og:description" content="Cancer biology at UAB. Projects and research.">
   <meta property="og:url" content="https://max-pasho.github.io/">
-  <meta property="og:image" content="https://max-pasho.github.io/assets/img/grid/og.jpg">
+  <meta property="og:image" content="https://max-pasho.github.io/assets/img/og.png">
   <meta name="twitter:card" content="summary_large_image">
-
+  <link rel="preload" href="/assets/fonts/nunito/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css">
+  <script type="module" src="/assets/js/site.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="nav">
-    <div class="wrap">
-      <a class="brand" href="/">max-pasho</a>
-      <nav aria-label="Main">
-        <ul>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="https://github.com/max-pasho">GitHub</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="site-nav">
+    <lg-navbar role="navigation" aria-label="Main" blur="4">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/projects/">Projects</a>
+      <a href="/about/">About</a>
+    </lg-navbar>
+  </div>
 
   <main id="main">
-    <section class="hero">
-      <div class="wrap">
-        <p class="eyebrow rise">max-pasho</p>
-        <h1 class="rise" style="--i:1">Software that makes complicated things simple.</h1>
-        <p class="sub rise" style="--i:2">I build tools for the Mac, and maps that turn public data into something anyone can read.</p>
-        <div class="actions rise" style="--i:3">
-          <a class="button" href="#projects">See projects</a>
-          <a class="button secondary" href="https://github.com/max-pasho">GitHub</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="projects" aria-labelledby="projects-title">
-      <div class="wrap">
-        <h2 class="section-title" id="projects-title">Projects. <span>What I’m building.</span></h2>
-
-        <div class="tiles">
-          <!-- GRID -->
-          <article class="tile dark">
-            <div class="copy">
-              <img class="app-icon" src="/assets/img/grid/icon-180.png" alt="" width="76" height="76">
-              <p class="kicker">macOS app · v1.0.0</p>
-              <h3><a href="/projects/grid/">GRID</a></h3>
-              <p class="tagline">A terminal-first workspace for&nbsp;macOS.</p>
-              <p class="desc">A real terminal, file browser, app launcher, widget deck, web browser and offline map in one keyboard-driven window, styled after <i>Tron: Legacy</i> and <i>Tron: Ares</i>.</p>
-              <div class="links">
-                <a class="more" href="/projects/grid/">Learn more</a>
-                <a class="more" href="https://github.com/max-pasho/grid/releases/latest">Download</a>
-              </div>
-            </div>
-            <div class="art">
-              <img src="/assets/img/grid/hero-960.webp"
-                   srcset="/assets/img/grid/hero-960.webp 960w, /assets/img/grid/hero.webp 1600w"
-                   sizes="(max-width: 1080px) 90vw, 480px"
-                   width="960" height="573" loading="lazy"
-                   alt="GRID with a file tree, a split terminal and the widget deck">
-            </div>
-          </article>
-
-          <!-- Radon map (in development) -->
-          <article class="tile radon static">
-            <div class="copy">
-              <p class="kicker">Coming soon</p>
-              <h3>Radon Map</h3>
-              <p class="tagline">Radon and cancer data, made easy&nbsp;to&nbsp;read.</p>
-              <p class="desc">An interactive map of the United States that shows radon levels next to cancer rate statistics, explained in plain language for everyday people, not just scientists.</p>
-              <div class="links"><span class="status">In development</span></div>
-            </div>
-            <div class="art">
-              <svg class="tilemap" viewBox="0 0 546 362" role="presentation" aria-hidden="true" focusable="false">
-              <rect class="h1" x="0" y="0" width="40" height="40" rx="7"/>
-              <rect class="h1" x="506" y="0" width="40" height="40" rx="7"/>
-              <rect class="h2" x="460" y="46" width="40" height="40" rx="7"/>
-              <rect class="h1" x="506" y="46" width="40" height="40" rx="7"/>
-              <rect class="h2" x="46" y="92" width="40" height="40" rx="7"/>
-              <rect class="h3" x="92" y="92" width="40" height="40" rx="7"/>
-              <rect class="h4" x="138" y="92" width="40" height="40" rx="7"/>
-              <rect class="h5" x="184" y="92" width="40" height="40" rx="7"/>
-              <rect class="h5" x="230" y="92" width="40" height="40" rx="7"/>
-              <rect class="h4" x="276" y="92" width="40" height="40" rx="7"/>
-              <rect class="h4" x="322" y="92" width="40" height="40" rx="7"/>
-              <rect class="h4" x="368" y="92" width="40" height="40" rx="7"/>
-              <rect class="h4" x="414" y="92" width="40" height="40" rx="7"/>
-              <rect class="h3" x="460" y="92" width="40" height="40" rx="7"/>
-              <rect class="h2" x="506" y="92" width="40" height="40" rx="7"/>
-              <rect class="h2" x="46" y="138" width="40" height="40" rx="7"/>
-              <rect class="h3" x="92" y="138" width="40" height="40" rx="7"/>
-              <rect class="h4" x="138" y="138" width="40" height="40" rx="7"/>
-              <rect class="h5" x="184" y="138" width="40" height="40" rx="7"/>
-              <rect class="h5" x="230" y="138" width="40" height="40" rx="7"/>
-              <rect class="h5" x="276" y="138" width="40" height="40" rx="7"/>
-              <rect class="h5" x="322" y="138" width="40" height="40" rx="7"/>
-              <rect class="h5" x="368" y="138" width="40" height="40" rx="7"/>
-              <rect class="h4" x="414" y="138" width="40" height="40" rx="7"/>
-              <rect class="h3" x="460" y="138" width="40" height="40" rx="7"/>
-              <rect class="h2" x="46" y="184" width="40" height="40" rx="7"/>
-              <rect class="h3" x="92" y="184" width="40" height="40" rx="7"/>
-              <rect class="h4" x="138" y="184" width="40" height="40" rx="7"/>
-              <rect class="h4" x="184" y="184" width="40" height="40" rx="7"/>
-              <rect class="h4" x="230" y="184" width="40" height="40" rx="7"/>
-              <rect class="h4" x="276" y="184" width="40" height="40" rx="7"/>
-              <rect class="h4" x="322" y="184" width="40" height="40" rx="7"/>
-              <rect class="h4" x="368" y="184" width="40" height="40" rx="7"/>
-              <rect class="h4" x="414" y="184" width="40" height="40" rx="7"/>
-              <rect class="h3" x="460" y="184" width="40" height="40" rx="7"/>
-              <rect class="h2" x="92" y="230" width="40" height="40" rx="7"/>
-              <rect class="h3" x="138" y="230" width="40" height="40" rx="7"/>
-              <rect class="h3" x="184" y="230" width="40" height="40" rx="7"/>
-              <rect class="h3" x="230" y="230" width="40" height="40" rx="7"/>
-              <rect class="h3" x="276" y="230" width="40" height="40" rx="7"/>
-              <rect class="h3" x="322" y="230" width="40" height="40" rx="7"/>
-              <rect class="h3" x="368" y="230" width="40" height="40" rx="7"/>
-              <rect class="h2" x="414" y="230" width="40" height="40" rx="7"/>
-              <rect class="h2" x="184" y="276" width="40" height="40" rx="7"/>
-              <rect class="h2" x="230" y="276" width="40" height="40" rx="7"/>
-              <rect class="h2" x="276" y="276" width="40" height="40" rx="7"/>
-              <rect class="h2" x="322" y="276" width="40" height="40" rx="7"/>
-              <rect class="h2" x="368" y="276" width="40" height="40" rx="7"/>
-              <rect class="h1" x="0" y="322" width="40" height="40" rx="7"/>
-              <rect class="h1" x="184" y="322" width="40" height="40" rx="7"/>
-              <rect class="h1" x="414" y="322" width="40" height="40" rx="7"/>
-              </svg>
-              <p class="art-note">Preview illustration, not real data.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="about">
-      <div class="wrap">
-        <h2>Built in the open.</h2>
-        <p>Every project here lives on GitHub. Follow along there for the code, new releases and what’s coming next.</p>
+    <!-- Hero -->
+    <section class="wrap hero" aria-labelledby="name">
+      <h1 class="hero-name display" id="name"><span>Max</span><span>Pasho</span></h1>
+      <p class="hero-tag eyebrow">Cancer Biology<br>UAB · Class of 2028</p>
+      <svg class="hero-cell cell-shape" viewBox="-220 -110 440 220" aria-hidden="true" focusable="false">
+        <path class="membrane" d="M0 -50.0 C22.0 -50.0 21.9 -62.8 42.4 -78.8 A100 100 0 1 1 42.4 78.8 C21.9 62.8 22.0 50.0 0 50.0 C-22.0 50.0 -21.9 62.8 -42.4 78.8 A100 100 0 1 1 -42.4 -78.8 C-21.9 -62.8 -22.0 -50.0 0 -50.0Z"/>
+        <circle class="nucleus" cx="-104" cy="0" r="34"/>
+        <circle class="nucleus" cx="104" cy="0" r="34"/>
+      </svg>
+      <div class="hero-foot">
+        <p class="lede">I study cancer biology at the University of Alabama at Birmingham, with research in neuroblastoma and colorectal cancer. I also build software, and this is where it lives.</p>
         <div class="actions">
-          <a class="more" href="https://github.com/max-pasho">Visit my GitHub</a>
+          <a class="glass-btn" data-glass="tinted" href="/projects/">See projects</a>
+          <a class="glass-btn" data-glass="plain" href="https://github.com/max-pasho">GitHub</a>
         </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="wrap section" aria-labelledby="projects-title">
+      <h2 class="section-title display" id="projects-title">Projects</h2>
+      <div class="cards">
+        <article class="card">
+          <p class="status dev">In development</p>
+          <h3>Radon &amp; Cancer Map</h3>
+          <p>An interactive map of the United States that shows radon levels alongside cancer statistics, explained in plain language for everyday readers.</p>
+          <figure class="art">
+            <svg class="tilemap" viewBox="0 0 568 376" aria-hidden="true" focusable="false">
+            <circle class="t0" cx="20" cy="20" r="20"/>
+            <circle class="t0" cx="548" cy="20" r="20"/>
+            <circle class="t0" cx="500" cy="68" r="20"/>
+            <circle class="t0" cx="548" cy="68" r="20"/>
+            <circle class="t1" cx="68" cy="116" r="20"/>
+            <circle class="t2" cx="116" cy="116" r="20"/>
+            <circle class="t3" cx="164" cy="116" r="20"/>
+            <circle class="t3" cx="212" cy="116" r="20"/>
+            <circle class="t3" cx="260" cy="116" r="20"/>
+            <circle class="t3" cx="308" cy="116" r="20"/>
+            <circle class="t3" cx="356" cy="116" r="20"/>
+            <circle class="t3" cx="404" cy="116" r="20"/>
+            <circle class="t2" cx="452" cy="116" r="20"/>
+            <circle class="t1" cx="500" cy="116" r="20"/>
+            <circle class="t0" cx="548" cy="116" r="20"/>
+            <circle class="t1" cx="68" cy="164" r="20"/>
+            <circle class="t2" cx="116" cy="164" r="20"/>
+            <circle class="t3" cx="164" cy="164" r="20"/>
+            <circle class="t3" cx="212" cy="164" r="20"/>
+            <circle class="t3" cx="260" cy="164" r="20"/>
+            <circle class="t3" cx="308" cy="164" r="20"/>
+            <circle class="t3" cx="356" cy="164" r="20"/>
+            <circle class="t3" cx="404" cy="164" r="20"/>
+            <circle class="t2" cx="452" cy="164" r="20"/>
+            <circle class="t1" cx="500" cy="164" r="20"/>
+            <circle class="t1" cx="68" cy="212" r="20"/>
+            <circle class="t1" cx="116" cy="212" r="20"/>
+            <circle class="t2" cx="164" cy="212" r="20"/>
+            <circle class="t3" cx="212" cy="212" r="20"/>
+            <circle class="t3" cx="260" cy="212" r="20"/>
+            <circle class="t3" cx="308" cy="212" r="20"/>
+            <circle class="t3" cx="356" cy="212" r="20"/>
+            <circle class="t3" cx="404" cy="212" r="20"/>
+            <circle class="t2" cx="452" cy="212" r="20"/>
+            <circle class="t1" cx="500" cy="212" r="20"/>
+            <circle class="t1" cx="116" cy="260" r="20"/>
+            <circle class="t1" cx="164" cy="260" r="20"/>
+            <circle class="t2" cx="212" cy="260" r="20"/>
+            <circle class="t2" cx="260" cy="260" r="20"/>
+            <circle class="t2" cx="308" cy="260" r="20"/>
+            <circle class="t2" cx="356" cy="260" r="20"/>
+            <circle class="t2" cx="404" cy="260" r="20"/>
+            <circle class="t1" cx="452" cy="260" r="20"/>
+            <circle class="t1" cx="212" cy="308" r="20"/>
+            <circle class="t1" cx="260" cy="308" r="20"/>
+            <circle class="t0" cx="308" cy="308" r="20"/>
+            <circle class="t0" cx="356" cy="308" r="20"/>
+            <circle class="t0" cx="404" cy="308" r="20"/>
+            <circle class="t0" cx="20" cy="356" r="20"/>
+            <circle class="t0" cx="212" cy="356" r="20"/>
+            <circle class="t0" cx="452" cy="356" r="20"/>
+            </svg>
+            <figcaption class="note">Illustration only, not real data.</figcaption>
+          </figure>
+        </article>
+
+        <article class="card">
+          <p class="status">macOS app · v1.0.0</p>
+          <h3>GRID</h3>
+          <p>A terminal-first workspace for macOS: a terminal, files, a web browser and an offline map in one keyboard-driven window.</p>
+          <div class="grid-mark">
+            <img src="/assets/img/grid/icon-180.png" alt="GRID app icon" width="180" height="180" loading="lazy">
+          </div>
+          <div class="actions">
+            <a class="glass-btn" data-glass="tinted" href="/projects/grid/">View project</a>
+            <a class="glass-btn" data-glass="plain" href="https://github.com/max-pasho/grid/releases/latest">Download</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section class="wrap section" aria-labelledby="research-title">
+      <h2 class="section-title display" id="research-title">Research</h2>
+      <div class="research">
+        <div>
+          <h3>Neuroblastoma</h3>
+          <p class="when">Undergraduate research · 2025–present</p>
+          <p>What pushes neuroblastoma cells in zebrafish toward neuronal, progenitor-like or apoptotic fates.</p>
+        </div>
+        <div>
+          <h3>Colorectal cancer</h3>
+          <p class="when">Summer research</p>
+          <p>Testing an experimental drug, with Western blots and immunohistochemistry on tumor samples.</p>
+        </div>
+      </div>
+      <div class="actions research-more">
+        <a class="glass-btn" data-glass="plain" href="/about/">More about me</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="wrap">
-      <span>Copyright © 2026 max-pasho.</span>
-      <span><a href="https://github.com/max-pasho">GitHub</a></span>
+      <span>© 2026 Max Pasho</span>
+      <a href="https://github.com/max-pasho">GitHub</a>
     </div>
   </footer>
 </body>
