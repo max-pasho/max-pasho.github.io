@@ -1,38 +1,21 @@
 # max-pasho.github.io
 
-Personal site and project pages, served by GitHub Pages at <https://max-pasho.github.io>.
+**<https://max-pasho.github.io>**
 
-Plain HTML and CSS: no build step, no dependencies.
+My personal site, and the home for my projects. Each project gets its own page that explains what it is, shows it in action and links to the code and downloads.
 
-## Layout
+## Projects
 
-```text
-index.html              Home page: intro + project tiles
-404.html                Not-found page
-projects/grid/          GRID project page (styled to match the app)
-assets/css/site.css     Main site style (clean, light/dark following the system)
-assets/css/grid.css     GRID page style (GRID's own design tokens and themes)
-assets/js/grid.js       GRID page theme switch (Legacy / Ares / ENCOM)
-assets/img/             Favicon and images (GRID screenshots in assets/img/grid/)
-.nojekyll               Serve files as-is (skip Jekyll)
-```
+### [GRID](https://max-pasho.github.io/projects/grid/)
 
-## Preview locally
+A terminal-first workspace for macOS. It puts a real terminal, a file browser, an app launcher, a widget deck, a web browser and an offline map in one keyboard-driven window, styled after *Tron: Legacy* and *Tron: Ares*. The map can plan routes that avoid mapped licence-plate reader (ALPR) cameras, all worked out on your Mac.
 
-```bash
-python3 -m http.server 8000
-```
+[Project page](https://max-pasho.github.io/projects/grid/) · [Download](https://github.com/max-pasho/grid/releases/latest) · [Source](https://github.com/max-pasho/grid)
 
-Then open <http://localhost:8000>.
+### Radon Map *(in development)*
 
-## Adding a project
+An interactive map of the United States that shows radon levels next to cancer rate statistics. The goal is to make this data easy for everyday people to read and understand, not just scientists.
 
-1. Create `projects/<name>/index.html`. Start from `404.html` for the clean site style, or give the page its own stylesheet like GRID.
-2. Put its images in `assets/img/<name>/` (WebP at 1600 px and 960 px wide keeps pages fast).
-3. Add a tile for it in the `.tiles` grid in `index.html`. Remove the `static` class from a tile once it links to a page.
+---
 
-Use `projects/<name>/` rather than `/<name>/`: a repository with GitHub Pages turned on is served at `max-pasho.github.io/<repo>/`, which would clash with a page at the same path.
-
-## Publishing
-
-GitHub Pages publishes from the branch set in **Settings › Pages** (normally `main`, folder `/`).
+More projects will be added here as they're built. Follow along on [GitHub](https://github.com/max-pasho).
