@@ -7,6 +7,12 @@
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#091d36">
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <script>
+    // Page transitions: which nav item was current on the previous page (set by site.js).
+    try { var f = sessionStorage.getItem("navFrom"); if (f !== null) { sessionStorage.removeItem("navFrom"); document.documentElement.dataset.navFrom = f; } } catch (e) {}
+  </script>
+  <link rel="modulepreload" href="/assets/vendor/liquidglass/liquid-glass.js">
+  <link rel="modulepreload" href="/assets/vendor/liquidglass/components.js">
   <link rel="stylesheet" href="/assets/css/site.css">
   <script type="module" src="/assets/js/site.js"></script>
 </head>

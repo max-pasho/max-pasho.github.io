@@ -15,6 +15,12 @@
   <meta property="og:image" content="https://max-pasho.github.io/assets/img/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" href="/assets/fonts/nunito/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    // Page transitions: which nav item was current on the previous page (set by site.js).
+    try { var f = sessionStorage.getItem("navFrom"); if (f !== null) { sessionStorage.removeItem("navFrom"); document.documentElement.dataset.navFrom = f; } } catch (e) {}
+  </script>
+  <link rel="modulepreload" href="/assets/vendor/liquidglass/liquid-glass.js">
+  <link rel="modulepreload" href="/assets/vendor/liquidglass/components.js">
   <link rel="stylesheet" href="/assets/css/site.css">
   <script type="module" src="/assets/js/site.js"></script>
 </head>
@@ -135,7 +141,7 @@
       <div class="research">
         <div>
           <h3>Neuroblastoma</h3>
-          <p class="when">Undergraduate research · 2025–present</p>
+          <p class="when">Undergraduate research · 2025–2026</p>
           <p>What pushes neuroblastoma cells in zebrafish toward neuronal, progenitor-like or apoptotic fates.</p>
         </div>
         <div>

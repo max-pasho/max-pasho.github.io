@@ -238,7 +238,7 @@ lg-button[tone="tinted"] .lg-surface__tint { background: color-mix(in srgb, var(
 .plate .col.t { fill: var(--coral); }
 .plate-note { margin-top: 12px; font-size: 13px; color: var(--text-2); text-align: center; }
 
-.interests { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(24px, 4vw, 56px); }
+.interests { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 clamp(24px, 4vw, 56px); }
 .interests li { padding: 16px 0; border-top: 1px solid var(--hairline); font-size: clamp(18px, 1.6vw, 20px); }
 
 /* ---------- Footer ---------- */
@@ -295,7 +295,7 @@ lg-button[tone="tinted"] .lg-surface__tint { background: color-mix(in srgb, var(
 
 /* ---------- Tablet ---------- */
 @media (max-width: 900px) {
-  .cards, .research { grid-template-columns: 1fr; }
+  .cards, .research, .interests { grid-template-columns: 1fr; }
   .card.wide { grid-template-columns: 1fr; }
   .card.wide .art { order: -1; }
   .split { grid-template-columns: 1fr; }
@@ -324,3 +324,28 @@ lg-button[tone="tinted"] .lg-surface__tint { background: color-mix(in srgb, var(
 }
 
 .notfound-title { font-size: clamp(32px, 4.5vw, 56px); line-height: 1.05; }
+
+/* ---------- Page transitions ----------
+   Cross-document View Transitions (Chrome/Edge 126+, Safari 18.2+). Other browsers switch pages
+   instantly. The page content fades and rises; the navigation bar stays put and its glass highlight
+   slides from the previous page's item to the new one (see site.js). Off with reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+
+  ::view-transition-old(root) { animation: vt-out 120ms cubic-bezier(.4, 0, 1, 1) both; }
+  ::view-transition-new(root) { animation: vt-in 360ms cubic-bezier(.2, .8, .2, 1) 100ms both; }
+
+  .site-nav { view-transition-name: site-nav; }
+  ::view-transition-group(site-nav) { animation: none; }
+  ::view-transition-old(site-nav) { display: none; }
+  ::view-transition-new(site-nav) { animation: none; }
+}
+@keyframes vt-out { to { opacity: 0; transform: translateY(-6px); } }
+@keyframes vt-in { from { opacity: 0; transform: translateY(18px); } }
+
+/* While arriving from another page, the not-yet-upgraded nav marks the page you came from, so the
+   glass highlight can slide from there instead of jumping. */
+[data-nav-from] .site-nav lg-navbar:not(:defined) > a[aria-current="page"] { background: transparent; color: var(--text); }
+[data-nav-from="0"] .site-nav lg-navbar:not(:defined) > a:nth-of-type(1),
+[data-nav-from="1"] .site-nav lg-navbar:not(:defined) > a:nth-of-type(2),
+[data-nav-from="2"] .site-nav lg-navbar:not(:defined) > a:nth-of-type(3) { background: var(--blue-fill); color: #fff; }
